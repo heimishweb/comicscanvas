@@ -1,6 +1,8 @@
 const clearButton = document.querySelector('.clear');
 const stroke_weight = document.querySelector('.stroke-weight');
 const color_picker = document.querySelector('.color-picker');
+// const puppeteer = require('puppeteer');
+
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -25,7 +27,25 @@ background.onload = function () {
 
 }
 
+//byron's puppeteer code
+// async function run() {
+//   let browser = await puppeteer.launch({ headless: false });
+//   let page = await browser.newPage();
+//   await page.goto('http://localhost:5000/');
+//   await page.screenshot({ path: './image.jpg', type: 'jpeg' });
+//   await page.close();
+//   await browser.close();
+// }
+
 $("#nextframe").on("click", function () {
+  // var page = require('webpage').create();
+  // page.open('http://github.com/', function () {
+  //   page.render('github.png');
+  //   phantom.exit();
+  // });
+
+  // run();
+
   var opac = 0.98;
   //!!i want to take a screen shot *HERE* before loading the next vellum paper
   ctx.globalAlpha = opac; //to change opacity to 40%
@@ -33,55 +53,47 @@ $("#nextframe").on("click", function () {
 })
 
 //saving image***************************************** [not working]
-function saveImage() {
-  var canvas = document.getElementById("mycanvas");
-  var img = canvas.toDataURL("image/png");
-  // with the value in IMG you can write it out as a new Image like so:
 
-  document.write('<img src="' + img + '"/>');
- 
-  }
 
-  $("#capture").on("click", function () {
-    saveImage();
-  });
-  //******************************************************
+//******************************************************
 
-  canvas.addEventListener('mousedown', start);
-  canvas.addEventListener('mousemove', draw);
-  canvas.addEventListener('mouseup', stop);
+canvas.addEventListener('mousedown', start);
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', stop);
 
-  clearButton.addEventListener('click', clearCanvas);
+clearButton.addEventListener('click', clearCanvas);
 
-  function start(e) {
-    isDrawing = true;
-    draw(e);
-  }
+function start(e) {
+  isDrawing = true;
+  draw(e);
+}
 
-  function draw({ clientX: x, clientY: y }) {
-    if (!isDrawing) return;
-    ctx.lineWidth = stroke_weight.value;
-    ctx.lineCap = "round";
-    ctx.strokeStyle = color_picker.value;
+function draw({ clientX: x, clientY: y }) {
+  if (!isDrawing) return;
+  ctx.lineWidth = stroke_weight.value;
+  ctx.lineCap = "round";
+  ctx.strokeStyle = color_picker.value;
 
-    ctx.lineTo(x, y);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-  }
+  ctx.lineTo(x, y);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+}
 
-  function stop() {
-    isDrawing = false;
-    ctx.beginPath();
-  }
+function stop() {
+  isDrawing = false;
+  ctx.beginPath();
+}
 
-  function clearCanvas() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }
+function clearCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
-  window.addEventListener('resize', resizeCanvas);
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+
+

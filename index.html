@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Canvas Drawing App</title>
-  <link rel="stylesheet" href="./assets/css/main.min.css" />
-</head>
-<body>
-  <canvas id="myCanvas">
-    
-  </canvas>
-  <main>
-    <section class="colors">
-      <input type="text" class="color-picker" value="#171717" />
-    </section>
-    <section class="thickness">
-      <input type="number" class="stroke-weight" value="3" />
-    </section>
-    <button class="clear">X</button>
-  </main>
-  <button id="capture">Capture</button>
-  <button id="nextframe">next frame</button>
-  <button id="changeopac">opacity 1.0</button>
-  <button id="newTemplate">New Template</button>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/screenshot.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-image: url('onomatopeia-bg2.png');"></body>>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="header">
+            Comics Canvas!
+        </div>
+    </div>
+    <div class="row">
+        <p> </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-3">
+            <a href="index-cb.html">
+                <img src="canvas-bubble-icon.png">
+                template with bubbles
+            </a>
+        </div>
+        <div class="col-md-3">
+            <img src="canvas-plain-icon.png">
+            template without bubbles
+        </div>
+        <div class="col-md-3">
+            <img src="canvas-bubble-icon-blue.png">
+            template with colors
+        </div>
+    </div>
+    <div class="row">
+        <p> </p>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-12" id="footer">
+            use the pre-made templates and drawing app to make your own comics on the fly!
+        </div>
+
+    </div>
+    <hr>
+</div>
 </body>
+
 </html>

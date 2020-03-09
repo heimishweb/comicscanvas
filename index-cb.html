@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas Drawing App</title>
+  <link rel="stylesheet" href="./assets/css/main.min.css" />
+</head>
+
+<body>
+  <canvas id="myCanvas">
+
+  </canvas>
+  <main>
+    <section class="colors">
+      <input type="text" class="color-picker" value="#171717" />
+    </section>
+    <section class="thickness">
+      <input type="number" class="stroke-weight" value="3" />
+    </section>
+    <button class="clear">X</button>
+  </main>
+  <button id="capture">Capture</button>
+  <button id="nextframe">next frame</button>
+  <button id="changeopac">opacity 1.0</button>
+  <button id="newTemplate">New Template</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="./canvas2image.js"></script>
+
+
+</body>
+
+</html>

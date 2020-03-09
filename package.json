@@ -4,8 +4,11 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "html2canvas": "^1.0.0-rc.5",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "html2canvas": "^1.0.0-rc.5",
+    "phantomjs": "^2.1.7",
+    "puppeteer": "^2.1.1",
     "system": "^2.0.1"
   },
   "devDependencies": {},

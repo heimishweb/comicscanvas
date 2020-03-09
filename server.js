@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use("/assets/css", express.static(__dirname + '/assets/css'));
 app.use("/assets/js", express.static(__dirname + '/assets/js'));
+app.use("/", express.static(__dirname + '/'));
+
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
