@@ -11,13 +11,13 @@ let isDrawing = false;
 //background comic template image code ****************************
 var imageUrl1;
 var background = new Image();
-background.src = "https://res.cloudinary.com/dejaksfsk/image/upload/c_scale,h_650/v1583798453/blank-template_udb2gw.png";
+background.src = "https://res.cloudinary.com/dejaksfsk/image/upload/c_scale,h_650/v1583798452/blank-template2_dlso0r.png";
 
 
 //super imposing another image - changing opacity to make transluscent to make
 var imageUrl2;
 var background2 = new Image();
-background2.src = "https://res.cloudinary.com/dejaksfsk/image/upload/c_scale,h_650/v1583798453/blank-template_udb2gw.png";
+background2.src = "https://res.cloudinary.com/dejaksfsk/image/upload/c_scale,h_650/v1583798452/blank-template2_dlso0r.png";
 
 background.onload = function () {
   // ctx.globalAlpha = 0.4; //to change opacity to 40%
