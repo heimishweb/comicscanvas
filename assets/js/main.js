@@ -52,6 +52,9 @@ $("#nextframe").on("click", function () {
   ctx.drawImage(background2, 100, 0);
 })
 
+$("#startOver").on("click", function () {
+  location.reload();
+})
 //saving image***************************************** [not working]
 
 
